@@ -9,3 +9,7 @@
 # Math
 - [最大公約数(Euclidの互除法)](https://github.com/gtnao0219/algorithm/blob/master/math/gcd.cpp)
 - [素因数分解](https://github.com/gtnao0219/algorithm/blob/master/math/prime_factor.cpp)
+
+# Snippets
+- [bit全探索](https://github.com/gtnao0219/algorithm/blob/master/snippets/bit_full_search.cpp)
+- [順列探索](https://github.com/gtnao0219/algorithm/blob/master/snippets/permutation.cpp)
