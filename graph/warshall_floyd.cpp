@@ -56,3 +56,33 @@ int main() {
         cout << endl;
     }
 }
+
+/*
+    verified https://atcoder.jp/contests/abc073/tasks/abc073_d
+*/
+int main() {
+    int n, m, r; cin >> n >> m >> r;
+    vector<int> rs(r);
+    for (int i = 0; i < r; ++i) {
+        cin >> rs[i];
+        --rs[i];
+    }
+    WarshallFloyd wf(n);
+    for (int i = 0; i < m; ++i) {
+        int s, t, d; cin >> s >> t >> d;
+        --s, --t;
+        wf.add_edge(s, t, d);
+        wf.add_edge(t, s, d);
+    }
+    wf.build();
+    sort(rs.begin(), rs.end());
+    long long res = 1LL<<60;
+    do {
+        long long sum = 0;
+        for (int i = 1; i < r; ++i) {
+            sum += wf.path(rs[i - 1], rs[i]);
+        }
+        res = min(res, sum);
+    } while (next_permutation(rs.begin(), rs.end()));
+    cout << res << endl;
+}
