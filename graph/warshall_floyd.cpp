@@ -1,6 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+  // Overview
+  グラフの全点間最短路を求める。
+  負辺があっても動作。負閉路検出可能。
+
+  // Time complexity
+  O(n ^ 3) (n: 頂点の数)
+
+  // Initialization
+  WarshallFloyd wf = WarshallFloyd(n); (n: 頂点の数)
+  wf.add_edge(u, v, c); (u: start, v: to, c: コスト) (無向グラフの場合は両辺に張る)
+  wf.build();
+*/
 struct WarshallFloyd {
     typedef vector< vector< long long > > Matrix;
     const long long INF = 1LL<<60;
@@ -16,18 +29,23 @@ struct WarshallFloyd {
         for (int k = 0; k < g.size(); ++k) {
             for (int i = 0; i < g.size(); ++i) {
                 for (int j = 0; j < g.size(); ++j) {
+                    if(g[i][k] == INF || g[k][j] == INF) continue;
                     g[i][j] = min(g[i][j], g[i][k] + g[k][j]);
                 }
             }
         }
     }
-    bool is_negative_cycle() {
+    // Time complexity
+    // O(n) (n: 頂点数)
+    bool has_negative_cycle() {
         for (int i = 0; i < n; ++i) if (g[i][i] < 0) return true;
         return false;
     }
-    long long path(int s, int t) {
-        if (g[s][t] < INF / 2) return g[s][t];
-        return INF;
+    long long shortest_path_value(int s, int t) {
+        return g[s][t];
+    }
+    bool is_unreachable(int s, int t) {
+        return g[s][t] == INF;
     }
 };
 
@@ -42,16 +60,15 @@ int main() {
         wf.add_edge(s, t, d);
     }
     wf.build();
-    if (wf.is_negative_cycle()) {
+    if (wf.has_negative_cycle()) {
         cout << "NEGATIVE CYCLE" << endl;
         return 0;
     }
     for (int i = 0; i < v; ++i) {
         for (int j = 0; j < v; ++j) {
             if (j != 0) cout << " ";
-            long long path = wf.path(i, j);
-            if (path == wf.INF) cout << "INF";
-            else cout << path;
+            if (wf.is_unreachable(i, j)) cout << "INF";
+            else cout << wf.shortest_path_value(i, j);
         }
         cout << endl;
     }
@@ -80,7 +97,7 @@ int main() {
     do {
         long long sum = 0;
         for (int i = 1; i < r; ++i) {
-            sum += wf.path(rs[i - 1], rs[i]);
+            sum += wf.shortest_path_value(rs[i - 1], rs[i]);
         }
         res = min(res, sum);
     } while (next_permutation(rs.begin(), rs.end()));
