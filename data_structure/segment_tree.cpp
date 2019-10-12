@@ -52,14 +52,18 @@ int main() {
     long long N;
     int M;
     cin >> N >> M;
-    vector<long long> p(M);
+    vector<long long> p(M), pls;
     vector<double> a(M), b(M);
     for (int i = 0; i < M; ++i) {
         cin >> p[i] >> a[i] >> b[i];
         --p[i];
+        pls.push_back(p[i]);
     }
+    sort(pls.begin(), pls.end());
+    pls.erase(unique(pls.begin(), pls.end()), pls.end());
+    int NN = pls.size();
     SegmentTree<pair<double, double>> st(
-        N,
+        NN,
         [](pair<double, double> a, pair<double, double> b) {
             return make_pair(a.first * b.first, a.second * b.first + b.second);
         },
@@ -67,8 +71,9 @@ int main() {
     );
     double res_min = 1.0, res_max = 1.0;
     for (int i = 0; i < M; ++i) {
-        st.update(p[i], make_pair(a[i], b[i]));
-        pair<double,double> res = st.query(0, N);
+        int idx = lower_bound(pls.begin(), pls.end(), p[i]) - pls.begin();
+        st.update(idx, make_pair(a[i], b[i]));
+        pair<double,double> res = st.query(0, NN);
         res_min = min(res_min, res.first + res.second);
         res_max = max(res_max, res.first + res.second);
     }
