@@ -4,7 +4,7 @@
 - [セグメント木](https://github.com/gtnao0219/algorithm/blob/master/data_structure/segment_tree.cpp)
 
 # Graph
-- [全点対間最短路(ワーシャルフロイド法)](https://github.com/gtnao0219/algorithm/blob/master/math/warshall_floyd.cpp)
+- [全点対間最短路(ワーシャルフロイド法)](https://github.com/gtnao0219/algorithm/blob/master/graph/warshall_floyd.cpp)
 
 # Math
 - [最大公約数(Euclidの互除法)](https://github.com/gtnao0219/algorithm/blob/master/math/gcd.cpp)
