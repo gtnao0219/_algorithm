@@ -14,7 +14,11 @@
 
 # Math
 - [最大公約数(Euclidの互除法)](https://github.com/gtnao0219/algorithm/blob/master/math/gcd.cpp)
+- [最小公倍数](https://github.com/gtnao0219/algorithm/blob/master/math/lcm.cpp)
+- [素数判定](https://github.com/gtnao0219/algorithm/blob/master/math/is_prime.cpp)
 - [素因数分解](https://github.com/gtnao0219/algorithm/blob/master/math/prime_factor.cpp)
+- [約数列挙](https://github.com/gtnao0219/algorithm/blob/master/math/divisor.cpp)
+- [拡張Euclidの互除法](https://github.com/gtnao0219/algorithm/blob/master/math/extended_gcd.cpp)
 
 # Snippets
 - [bit全探索](https://github.com/gtnao0219/algorithm/blob/master/snippets/bit_full_search.cpp)

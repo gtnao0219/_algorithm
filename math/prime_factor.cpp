@@ -12,3 +12,18 @@ map<long long, long long> prime_factor(long long n) {
     if (n != 1) res[n] = 1;
     return res;
 }
+
+/*
+    verified https://onlinejudge.u-aizu.ac.jp/problems/NTL_1_A
+*/
+int main() {
+    int n; cin >> n;
+    cout << n << ":";
+    auto pf = prime_factor(n);
+    for (auto p : pf) {
+        for (int i = 0; i < p.second; ++i) {
+            cout << " " << p.first;
+        }
+    }
+    cout << endl;
+}
