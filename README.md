@@ -3,6 +3,10 @@
 - [Binary Indexed Tree](https://github.com/gtnao0219/algorithm/blob/master/data_structure/binary_indexed_tree.cpp)
 - [セグメント木](https://github.com/gtnao0219/algorithm/blob/master/data_structure/segment_tree.cpp)
 
+# DP
+- [累積和](https://github.com/gtnao0219/algorithm/blob/master/dp/cumulative_sum.cpp)
+- [いもす法](https://github.com/gtnao0219/algorithm/blob/master/dp/imos.cpp)
+
 # Graph
 - [全点対間最短路(ワーシャルフロイド法)](https://github.com/gtnao0219/algorithm/blob/master/graph/warshall_floyd.cpp)
 - [強連結成分分解](https://github.com/gtnao0219/algorithm/blob/master/graph/strongly_connected_components.cpp)
