@@ -27,3 +27,4 @@
 # Snippets
 - [bit全探索](https://github.com/gtnao0219/algorithm/blob/master/snippets/bit_full_search.cpp)
 - [順列探索](https://github.com/gtnao0219/algorithm/blob/master/snippets/permutation.cpp)
+- [桁dp](https://github.com/gtnao0219/algorithm/blob/master/snippets/digit_dp.cpp)
