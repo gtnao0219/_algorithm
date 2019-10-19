@@ -2,6 +2,7 @@
 - [Union-Find木](https://github.com/gtnao0219/algorithm/blob/master/data_structure/union_find_tree.cpp)
 - [Binary Indexed Tree](https://github.com/gtnao0219/algorithm/blob/master/data_structure/binary_indexed_tree.cpp)
 - [セグメント木](https://github.com/gtnao0219/algorithm/blob/master/data_structure/segment_tree.cpp)
+- [LCA(ダブリング)](https://github.com/gtnao0219/algorithm/blob/master/data_structure/lca_doubling.cpp)
 
 # DP
 - [累積和](https://github.com/gtnao0219/algorithm/blob/master/dp/cumulative_sum.cpp)
