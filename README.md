@@ -11,6 +11,7 @@
 - [単一始点最短路(ダイクストラ法)](https://github.com/gtnao0219/algorithm/blob/master/graph/dijkstra.cpp)
 - [単一始点最短路(ベルマンフォード法)](https://github.com/gtnao0219/algorithm/blob/master/graph/bellman_ford.cpp)
 - [全点対間最短路(ワーシャルフロイド法)](https://github.com/gtnao0219/algorithm/blob/master/graph/warshall_floyd.cpp)
+- [最小全域木(kruskal)](https://github.com/gtnao0219/algorithm/blob/master/graph/kruskal.cpp)
 - [強連結成分分解](https://github.com/gtnao0219/algorithm/blob/master/graph/strongly_connected_components.cpp)
 - [最大流(Ford-Fulkerson法)](https://github.com/gtnao0219/algorithm/blob/master/graph/ford_fulkerson.cpp)
 
