@@ -25,6 +25,9 @@
 - [約数列挙](https://github.com/gtnao0219/algorithm/blob/master/math/divisor.cpp)
 - [拡張Euclidの互除法](https://github.com/gtnao0219/algorithm/blob/master/math/extended_gcd.cpp)
 
+# String
+- [Z Algorithm](https://github.com/gtnao0219/algorithm/blob/master/string/z_algorithm.cpp)
+
 # Snippets
 - [bit全探索](https://github.com/gtnao0219/algorithm/blob/master/snippets/bit_full_search.cpp)
 - [順列探索](https://github.com/gtnao0219/algorithm/blob/master/snippets/permutation.cpp)
