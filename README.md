@@ -6,6 +6,7 @@
 
 # DP
 - [累積和](https://github.com/gtnao0219/algorithm/blob/master/dp/cumulative_sum.cpp)
+- [二次元累積和](https://github.com/gtnao0219/algorithm/blob/master/dp/two_dimensions_cumulative_sum.cpp)
 - [いもす法](https://github.com/gtnao0219/algorithm/blob/master/dp/imos.cpp)
 
 # FullSearch
