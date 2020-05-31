@@ -2,9 +2,9 @@
 using namespace std;
 
 template<typename T>
-struct TwoDimensionsCumulativeSum {
+struct CumulativeSum2d {
     vector<vector<T>> s;
-    TwoDimensionsCumulativeSum(const vector<vector<T>> &grid) {
+    CumulativeSum2d(const vector<vector<T>> &grid) {
         int h = grid.size();
         int w = grid[0].size();
         s.resize(h + 1, vector<T>(w + 1, 0));
@@ -40,7 +40,7 @@ int main() {
     vector<vector<int> > grid(H, vector<int>(W));
     for (int i = 0; i < H; ++i) for (int j = 0; j < W; ++j) cin >> grid[i][j];
 
-    TwoDimensionsCumulativeSum<int> cs(grid);
+    CumulativeSum2d<int> cs(grid);
 
     int Q; cin >> Q;
     for (int q = 0; q < Q; ++q) {

@@ -6,8 +6,9 @@
 
 # DP
 - [累積和](https://github.com/gtnao0219/algorithm/blob/master/dp/cumulative_sum.cpp)
-- [二次元累積和](https://github.com/gtnao0219/algorithm/blob/master/dp/two_dimensions_cumulative_sum.cpp)
+- [二次元累積和](https://github.com/gtnao0219/algorithm/blob/master/dp/cumulative_sum_2d.cpp)
 - [いもす法](https://github.com/gtnao0219/algorithm/blob/master/dp/imos.cpp)
+- [二次元いもす法](https://github.com/gtnao0219/algorithm/blob/master/dp/imos_2d.cpp)
 
 # FullSearch
 - [BFS](https://github.com/gtnao0219/algorithm/blob/master/full_search/bfs.cpp)
