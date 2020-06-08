@@ -3,22 +3,24 @@ using namespace std;
 
 template<typename T>
 struct BIT {
-    int n;
-    vector<T> bit;
-    BIT(int _n) : n(_n), bit(_n + 1) { }
-    // [0, i], i is 0-indexed.
+    BIT(int n) : n(n), bit(n + 1, 0) { }
+    // i is 0-indexed.
+    void add(int i, T x) {
+        for (++i; i <= n + 1; i += i & -i) bit[i] += x;
+    }
+    // [0, i), i is 0-indexed.
     T sum(int i) {
-        T s = 0;
-        for (i++; i > 0; i -= i & -i) s += bit[i];
-        return s;
+        T res = 0;
+        for (; i > 0; i -= i & -i) res += bit[i];
+        return res;
     }
     // [l, r), l and r is 0-indexed.
     T sum(int l, int r) {
-        return sum(r - 1) - sum(l - 1);
+        return sum(r) - sum(l);
     }
-    void add(int i, T x) {
-        for (i++; i <= n; i += i & -i) bit[i] += x;
-    }
+private:
+    int n;
+    vector<T> bit;
 };
 
 /*
