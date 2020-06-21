@@ -12,6 +12,7 @@
 - [いもす法](https://github.com/gtnao0219/algorithm/blob/master/dp/imos.cpp)
 - [二次元いもす法](https://github.com/gtnao0219/algorithm/blob/master/dp/imos_2d.cpp)
 - [ヒストグラム最大長方形](https://github.com/gtnao0219/algorithm/blob/master/dp/largest_rectangle.cpp)
+- [Knuth-Yao Speedup](https://github.com/gtnao0219/algorithm/blob/master/dp/knuth_yao_speedup.cpp)
 
 # FullSearch
 - [BFS](https://github.com/gtnao0219/algorithm/blob/master/full_search/bfs.cpp)
