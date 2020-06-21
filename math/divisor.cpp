@@ -1,5 +1,7 @@
+#ifndef call_from_test
 #include<bits/stdc++.h>
 using namespace std;
+#endif
 
 vector<long long> divisor(long long n) {
     vector<long long> res;
@@ -9,20 +11,5 @@ vector<long long> divisor(long long n) {
             if (i != n / i) res.push_back(n / i);
         }
     }
-    // if sort is required
-    sort(res.begin(), res.end());
     return res;
-}
-
-/*
-    verified https://onlinejudge.u-aizu.ac.jp/problems/ITP1_3_D
-*/
-int main() {
-    int a, b, c; cin >> a >> b >> c;
-    auto d = divisor(c);
-    int res = 0;
-    for (int i = a; i <= b; ++i) {
-        if (binary_search(d.begin(), d.end(), i)) ++res;
-    }
-    cout << res << endl;
 }
