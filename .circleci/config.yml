@@ -1,0 +1,18 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: gcc:10.1.0
+    steps:
+      - checkout
+      - run:
+        name: Install Dependencies
+        command: |
+          apt-get update
+          apt-get install -y --no-install-recommends python3-pip python3-setuptools
+          pip3 install online-judge-verify-helper
+      - run:
+        name: Test
+        command: |
+          oj-verify run

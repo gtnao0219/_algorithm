@@ -1,5 +1,7 @@
+#ifndef call_from_test
 #include<bits/stdc++.h>
 using namespace std;
+#endif
 
 template<typename T>
 struct BIT {
@@ -22,16 +24,3 @@ private:
     int n;
     vector<T> bit;
 };
-
-/*
-    verified http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B&lang=jp
-*/
-int main() {
-    int n, q; cin >> n >> q;
-    BIT<int> bit(n);
-    for (int i = 0; i < q; ++i) {
-        int com, x, y; cin >> com >> x >> y;
-        if (com == 0) bit.add(--x, y);
-        else cout << bit.sum(--x, y) << endl;
-    }
-}
