@@ -1,5 +1,7 @@
+#ifndef call_from_test
 #include<bits/stdc++.h>
 using namespace std;
+#endif
 
 struct UnionFindTree {
     UnionFindTree(int n) : parent(n, -1), rank(n, 0) { }
@@ -21,17 +23,3 @@ struct UnionFindTree {
 private:
     vector<int> parent, rank;
 };
-
-/*
-    verified
-    https://atcoder.jp/contests/atc001/tasks/unionfind_a
-*/
-int main() {
-    int n, q; cin >> n >> q;
-    UnionFindTree uft(n);
-    for (int i = 0; i < q; ++i) {
-        int com, x, y; cin >> com >> x >> y;
-        if (com == 0) uft.unite(x, y);
-        else cout << (uft.same(x, y) ? "Yes" : "No") << endl;
-    }
-}
