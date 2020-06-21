@@ -7,12 +7,12 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install Dependencies
-        command: |
-          apt-get update
-          apt-get install -y --no-install-recommends python3-pip python3-setuptools
-          pip3 install online-judge-verify-helper
+          name: Install Dependencies
+           command: |
+            apt-get update
+            apt-get install -y --no-install-recommends python3-pip python3-setuptools
+            pip3 install online-judge-verify-helper
       - run:
-        name: Test
-        command: |
-          oj-verify run
+          name: Test
+          command: |
+            oj-verify run
